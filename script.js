@@ -5,16 +5,14 @@ $("#carrito").click(function (event) {
     
 });
 var array=[];
-$("#comprar1").click(function(event){
+$("#comprar").click(function(event){
     let nombre=document.querySelector("#nombre").innerHTML;
     console.log(nombre);
   let nuevo =array.push(nombre);
 })
-$("#carta").click(function(event){
-    ejecutarApi('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita');
-});
-function ejecutarApi(link){
-    fetch(url)
+
+function ejecutarApi(){
+    fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
         .then(response => response.json())
         .then(data => mostrarData(data))
         .catch(error => console.log(error))
