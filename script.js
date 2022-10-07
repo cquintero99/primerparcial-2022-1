@@ -1,15 +1,27 @@
 
 
-$("#carrito").click(function (event) {
+$("#carta").click(function (event) {
     $("#contenedor").load('carrito.html');
     
 });
+
 var array=[];
-$("#comprar").click(function(event){
-    let nombre=document.querySelector("#nombre").innerHTML;
+$(".comprar").click(function(event){
+    let nombre=document.querySelector(".nombre").innerHTML;
     console.log(nombre);
   let nuevo =array.push(nombre);
-})
+});
+
+$("#carrito").click(function(event){
+    ejecutarApi();
+});
+
+function getData(){
+    fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error))
+};
 
 function ejecutarApi(){
     fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
@@ -26,8 +38,7 @@ function ejecutarApi(){
                     rta += 
                    
                     
-                    ` <div class="container">
-                    <li class="list-group-item">
+                    ` <div >
                      <img class="imgCoctel"  height="150" width="150" src="${drinks[i].strDrinkThumb}"" > <h2 class="nombreCoctel" >${drinks[i].strDrink}</h2> </li>' `;
                 }
             }
