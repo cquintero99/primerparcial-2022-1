@@ -1,6 +1,6 @@
 
 
-$("#carta").click(function (event) {
+$("#carrito").click(function (event) {
     $("#contenedor").load('carrito.html');
     
 });
@@ -12,7 +12,7 @@ $(".comprar").click(function(event){
   let nuevo =array.push(nombre);
 });
 
-$("#carrito").click(function(event){
+$("#lista").click(function(event){
     ejecutarApi();
 });
 
@@ -38,8 +38,8 @@ function ejecutarApi(){
                     rta += 
                    
                     
-                    ` <div >
-                     <img class="imgCoctel"  height="150" width="150" src="${drinks[i].strDrinkThumb}"" > <h2 class="nombreCoctel" >${drinks[i].strDrink}</h2> </li>' `;
+                    ` <div class="col" >
+                     <img class="imgCoctel"  height="150" width="150" src="${drinks[i].strDrinkThumb}"" > <h2 class="nombreCoctel" >${drinks[i].strDrink}</h2><button type="button" class="btn btn-dark" >COMPRAR</button> <br></div>  `;
                 }
             }
             document.querySelector("#contenedor").innerHTML = rta;

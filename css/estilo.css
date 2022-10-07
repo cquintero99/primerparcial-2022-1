@@ -10,3 +10,11 @@
   justify-content: center;
 
 }
+div{
+  display: inline-block;
+}
+.division{
+display: flexbox;
+text-align: center;
+background-color: aqua;
+}

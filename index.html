@@ -10,7 +10,7 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/estilo.css">
 </head>
 
 <body>
@@ -24,33 +24,27 @@
         <div class="abs-center">
           <h3>COCTELE'S MARGARITA'S</h3>
           <button type="button " class="btn">
-            <a class="navbar-brand" href="#" id="carta" class="btn btn-primary">
-              Ver Carta
-            </a>
-          </button>
+            
 
+
+          <button type="button " class="btn" id="lista">LISTA COCTELES</button>
           <button type="button " class="btn">
-            <a class="navbar-brand" href="#" class="btn btn-primary" >
+            <a class="navbar-brand" href="#" class="btn btn-primary">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/107/107831.png?w=826&t=st=1665159373~exp=1665159973~hmac=63ddcf7756906c05b27b6745816ccdadf74f2d115434c1d0dfc94b4e3191e1d2"
-                alt="Logo" width="50" height="35" class="d-inline-block align-text-top" >
+                alt="Logo" width="50" height="35" class="d-inline-block align-text-top" id="carrito">
             </a>
           </button>
-          <button type="button " class="btn" id="carrito">Lista</button>
 
         </div>
       </div>
     </div>
   </nav>
 
-  <div class="container" id="contenedor">
-    <div class="container">
-      <div class="abs-center">
-        <h1 class="text-aling center">CARTA</h1>
-      </div>
-    </div>
+  <div class="container" id="contened">
     <div class="container text-center">
-      <div class="row">
+      <div class="row row-cols-2" id="contenedor">
+
         <div class="col">
           <div class="abs-center">
             <div class="card" style="width: 18rem;">
@@ -63,7 +57,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> 
         <div class="col">
           <div class="abs-center">
             <div class="card" style="width: 18rem;">
@@ -106,7 +100,9 @@
       </div>
 
 
-
+        
+        
+      </div>
     </div>
   </div>
   <footer>
